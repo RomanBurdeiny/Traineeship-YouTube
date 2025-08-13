@@ -61,15 +61,19 @@ body {
   align-items: center;
   justify-content: center;
   flex: 1 1 auto;
-  min-width: 0;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  max-width: 830px;
+  min-width: 360px;
 }
 
 .search-input {
   width: 100%;
-  max-width: 830px;
-  min-width: 360px;
   height: 44px;
-  padding: 0 16px;
+  padding: 0 44px 0 16px;
   border: none;
   border-radius: 22px;
   background-color: #f1f1f1;
@@ -77,15 +81,26 @@ body {
   color: #333;
 }
 
+.search-box img {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
 .header-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 50px;
   height: 40px;
   white-space: nowrap;
 }
 
 .action-icon {
+  position: relative;
   width: 32px;
   height: 32px;
   display: flex;
@@ -94,16 +109,33 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
-
-.action-icon img {
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
   width: 20px;
   height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.action-icon img {
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
 .user-avatar {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 
 .user-avatar img {
