@@ -7,10 +7,6 @@
   font-family: "Mulish", sans-serif;
 }
 
-body {
-  color: #0f0f0f;
-}
-
 .header {
   position: sticky;
   top: 0;
@@ -26,6 +22,8 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex: 0 0 auto;
+  flex-shrink: 0;
 }
 
 .burger {
@@ -47,6 +45,8 @@ body {
 .logo {
   display: flex;
   align-items: center;
+  font-weight: 700;
+  font-size: 26px;
   gap: 8px;
   width: 116px;
   height: 25px;
@@ -59,15 +59,17 @@ body {
 .header-center {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex: 1 1 auto;
+  justify-content: start;
+  width: 100%;
+  margin-left: 50px;
 }
 
 .search-box {
   position: relative;
+  display: block;
   width: 100%;
   max-width: 830px;
-  min-width: 360px;
+  min-width: 200px;
 }
 
 .search-input {
@@ -88,7 +90,7 @@ body {
   transform: translateY(-50%);
   width: 18px;
   height: 18px;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .header-right {
@@ -222,9 +224,13 @@ main {
 }
 
 .nav-buttons {
+  display: flex;
   margin-left: auto;
+  padding-right: 150px;
   display: flex;
   gap: 8px;
+  align-items: center;
+  height: 100%;
 }
 
 .nav-btn {
@@ -461,7 +467,7 @@ main {
 
 .channel-video-info {
   margin-left: 32px;
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
 }
@@ -477,7 +483,11 @@ main {
   font-weight: 400;
   text-align: start;
 }
-
+.channel-video-info p {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(194, 194, 194, 1);
+}
 .rec-widget{
   display:flex;
   flex-direction:column;
@@ -492,14 +502,6 @@ main {
   align-items:center;
   margin: 0 0 32px 0;
   gap:8px;
-}
-
-.action-icon{
-  width:24px;
-  height:24px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
 }
 
 .rec-card{
@@ -599,8 +601,6 @@ main {
   display: flex;
   font-size: 16px;
   font-weight: 400;
-  font-size: 16px;
-  font-weight: 400;
   border: none;
   background-color: white;
   cursor: pointer;
@@ -666,7 +666,7 @@ main {
   justify-content: flex-end;
   gap: 10px;
   padding: 14px 16px;
-  pointer-events: none; /* кликаются только кнопки */
+  pointer-events: none;
 }
 
 
@@ -689,7 +689,7 @@ main {
   position: relative;
   height: 8px;
   border-radius: 999px;
-  background: rgba(255,255,255,.35);         /* фоном — светло-серый */
+  background: rgba(255,255,255,.35);   
   overflow: hidden;
 }
 
@@ -703,7 +703,6 @@ main {
   width: 18%;
 }
 
-/* — Bottom controls — */
 .player-controls {
   display: flex;
   align-items: center;
@@ -822,8 +821,7 @@ main {
 .checkbox-ios input[type=checkbox]:checked + .checkbox-ios-switch:before {
 	transform:translateX(28px);
 }
- 
-/* Hover */
+
 .checkbox-ios input[type="checkbox"]:not(:disabled) + .checkbox-ios-switch {
 	cursor: pointer;
 	border-color: rgba(0, 0, 0, .3);
@@ -844,16 +842,15 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-between;
+   font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 .recommendations-title h2{
   font-size: 36px;
   font-weight: 700;
 }
-.recommendations-title{
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
+
 .video-column{
   display: flex;
   margin-top: 23px;
@@ -864,4 +861,19 @@ main {
 }
 .video-column .video-card{
 width: 100%;
+}
+
+
+
+
+@media (max-width: 720px) {
+.burger-menu{
+  display:none;
+}
+.search-input{
+  display:none;
+}
+.action-icon{
+  display: none;
+}
 }
