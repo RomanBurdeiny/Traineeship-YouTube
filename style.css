@@ -153,7 +153,10 @@
 
 .sidebar-nav {
   position: fixed;
-  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  top: 114px;
   left: 31px;
   width: 220px;
   overflow-y: auto;
@@ -162,6 +165,9 @@
 .sidebar-nav ul {
   list-style: none;
   margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .sidebar-nav li,
@@ -169,7 +175,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 0;
   color: #666;
   border-radius: 10px;
   cursor: pointer;
@@ -183,6 +188,8 @@
 
 .main-nav-icon {
   width: 20px;
+  filter: invert(18%) sepia(99%) saturate(7500%) hue-rotate(0deg) brightness(105%) contrast(105%);
+
 }
 
 .subscriptions li img {
@@ -201,10 +208,12 @@
 
 main {
   width: 100%;
-  padding-left: 250px;
+  padding-left: 255px;
   margin-top: 24px;
 }
-
+.subscribed-channel{
+margin-top: 60px ;
+}
 .section-header {
   display: flex;
   align-items: center;
