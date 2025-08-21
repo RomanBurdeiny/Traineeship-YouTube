@@ -43,12 +43,16 @@
     </div>
 </header>
 
-<nav class="sidebar-nav">
+    <main>
+    <nav class="sidebar-nav">
+        <div>
     <ul class="main-nav">
         <li><img class="main-nav-icon" src="assets/icons/Home.svg" alt="">Home</li>
         <li><img class="main-nav-icon" src="assets/icons/Trending.svg" alt="">Trending</li>
         <li><img class="main-nav-icon" src="assets/icons/Subscriptions.svg" alt="">Subscriptions</li>
-        <li></li>
+    </ul>
+
+    <ul class="main-nav">
         <li><img class="main-nav-icon" src="assets/icons/Library.svg" alt="">Library</li>
         <li><img class="main-nav-icon" src="assets/icons/History.svg" alt="">History</li>
         <li><img class="main-nav-icon" src="assets/icons/Watch later.svg" alt="">Watch later</li>
@@ -58,7 +62,7 @@
         <li><img class="main-nav-icon" src="assets/icons/Games.svg" alt="">Games</li>
         <li><img class="main-nav-icon" src="assets/icons/Show more.svg" alt="">Show more</li>
     </ul>
-
+</div>
     <span class="nav-subheading">Subscriptions</span>
     <ul class="subscriptions">
         <li><img src="assets/characters/Gussie Singleton.svg" alt="">Gussie Singleton</li>
@@ -71,17 +75,16 @@
 
     <p><img src="assets/icons/Setting.svg" alt="">Setting</p>
 </nav>
-
-<main>
-    <section class="subscribed-channel">
-    <div class="section-header">
-        <img class="section-header-avatar" src="assets/characters/Gussie Singleton.svg" alt="Dollie Blair">
-        <span class="section-header-title">Dollie Blair</span>
-        <div class="nav-buttons">
-            <button class="nav-btn"><</button>
-            <button class="nav-btn">></button>
+    <section class="content">
+        <section class="subscribed-channel">
+        <div class="section-header">
+            <img class="section-header-avatar" src="assets/characters/Gussie Singleton.svg" alt="Dollie Blair">
+            <span class="section-header-title">Dollie Blair</span>
+            <div class="nav-buttons">
+                <button class="nav-btn"><</button>
+                <button class="nav-btn">></button>
+            </div>
         </div>
-    </div>
     <div class="video-slider">
        <div class="video-card">
             <div class="thumbnail-container">
@@ -138,7 +141,7 @@
             </div>
             <div class="video-info">
                 <h3>Medical Care Is Just</h3>
-                <p>98k views • 2 days ago</p>
+                <p>18k views • 2 days ago</p>
                 <span>Dollie Blair</span>
             </div>
             
@@ -175,7 +178,7 @@
                 </div>            
                 <div class="video-info">
                     <h3>Dude You Re Getting A Telescope</h3>
-                    <p>36k views • 3 months ago</p>
+                    <p>34k views • 3 months ago</p>
                     <span>Gussie French</span>
                 </div>  
             </div>
@@ -186,7 +189,7 @@
             </div>            
             <div class="video-info">
                 <h3>Moon Gazing</h3>
-                <p>164k views • 11 months ago</p>
+                <p>54k views • 11 months ago</p>
                 <span>Edward Osborne</span>
             </div>
             
@@ -212,8 +215,10 @@
         <span>Recommended channel for you</span>
         <div class="nav-buttons">
             <button class="subscribe-btn">Subscribe 2.3m</button>
-            <button class="nav-btn"><</button>
-            <button class="nav-btn">></button>
+            <div>
+                <button class="nav-btn"><</button>
+                <button class="nav-btn">></button>
+            </div>
         </div>
     </div>
     <div class="video-row">
@@ -247,7 +252,7 @@
             </div>           
             <div class="video-info">
                 <h3>Radio Astronomy</h3>
-                <p>141k views • 11 months ago</p>
+                <p>1k views • 11 months ago</p>
                 <span>Food & Drink</span>
             </div>
         </div>
@@ -269,7 +274,7 @@
             </div>            
             <div class="video-info">
                 <h3>Baby Monitor Technology</h3>
-                <p>98k views • 7 days ago</p>
+                <p>86k views • 7 days ago</p>
                 <span>Food & Drink</span>
             </div>            
         </div>
@@ -286,6 +291,21 @@
         </div>
     </div>
     </section>
+    </section>
 </main>
+<nav class="tabbar">
+  <a href="#" class="tab is-active">
+    <img src="assets/icons/Home.svg" alt=""> <span>Home</span>
+  </a>
+  <a href="#" class="tab">
+    <img src="assets/icons/Trending.svg" alt=""> <span>Trending</span>
+  </a>
+  <a href="#" class="tab">
+    <img src="assets/icons/Subscriptions.svg" alt=""> <span>Subscriptions</span>
+  </a>
+  <a href="#" class="tab">
+    <img src="assets/icons/Library.svg" alt=""> <span>Library</span>
+  </a>
+</nav>
 </body>
 </html>
