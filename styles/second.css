@@ -102,6 +102,10 @@ main {
   height: 40px;
   white-space: nowrap;
 }
+.more-mobile {
+  display: none;
+}
+
 .action-icon {
   position: relative;
   width: 32px;
@@ -231,8 +235,9 @@ main {
   display: flex;
   flex-direction: column;
 }
-.channel-info ul {
+.desktop-nav {
   display: flex;
+  flex-direction: row;
   margin-bottom: 54px;
   gap: 70px;
   list-style: none;
@@ -520,6 +525,18 @@ main {
 .tabbar {
     display: none;
 }
+.mobile-nav{
+  display: none;
+}
+.subscribe-btn-mobile{
+  display: none;
+}
+
+
+
+
+
+
 @media (max-width: 720px) {
 .burger-menu{
   display:none;
@@ -549,7 +566,24 @@ main {
     padding: 0 16px;
     align-items: center;
     gap: 0 ;
-  }       
+  }     
+  .user-avatar{
+    display: none;
+  }  
+  .more-mobile{
+  padding-left: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.more-mobile p {
+  width: 5px;
+  height: 5px;
+  margin: 0;
+  line-height: 0;
+}
   main {
     display: block;
     height: calc(100vh - var(--header-h) - 56px); 
@@ -558,9 +592,10 @@ main {
   .content {
     width: 100%;
     min-width: 0;
-    padding: 0 12px 72px; 
+    padding: 0 0 72px; 
   }
   .subscribed-channel{
+    padding: 0 16px;
     margin: 0;
   }
   .section-header{
@@ -570,7 +605,11 @@ main {
     display: none;
   }
   .logo-mobile{
-    display: block;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    gap: 8px;
   }
 
   
@@ -618,9 +657,20 @@ main {
 
   .recommended .video-card,
   .category .video-card { width: 100%; height: auto; }
-  .subscribe-btn {
-    font-size: 14px;
+  .subscribe-btn-mobile {
+    display: block;
+    margin: 12px 0;
     padding: 8px 12px;
+    width: 120px;
+        max-height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(255, 42, 42, 0.3);
+    font-size: 12px;
+    font-weight: 400;
+    border: none;
+    background: #ff2a2a;
+    color: #fff;
+    cursor: pointer;
   }
 
   .tabbar {
@@ -655,4 +705,112 @@ main {
   .tabbar .tab.is-active img {
     filter: invert(18%) sepia(99%) saturate(7500%) hue-rotate(0deg) brightness(105%) contrast(105%);
   }
+.channel{
+  padding: 0 16px;
+  margin: 0;
+}
+.channel-bg{
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.channel-title{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+  margin: 0 0 8px; 
+  min-height: 56px;
+}
+
+.channel-title img{
+  position: absolute;
+  left: 0;
+  top: -35px;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+.channel-title span{
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+}
+.channel-title p{
+  font-size: 12px;
+  color: #9a9a9a;
+}
+
+.subscribe-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 36px;
+  padding: 0 16px;
+  margin: 10px 0 14px;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 999px;
+  box-shadow: 0 6px 14px rgba(255, 42, 42, 0.3);
+}
+
+.desktop-nav{
+  display: none;
+}
+.mobile-nav{
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0 0 8px;
+  padding-bottom: 6px;
+  overflow-x: auto;
+}
+.mobile-nav li{
+  position: relative;
+  font-size: 14px;
+  white-space: nowrap;
+  padding-bottom: 4px;
+}
+.mobile-nav li:first-child{
+  color: #ff2a2a;
+  font-weight: 700;
+}
+.mobile-nav li::after{
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 2px;
+  background: #ff2a2a;
+  transition: width .2s ease;
+}
+.channel-info li:hover::after{ width: 100%; }
+.channel-info li:first-child::after{ width: 100%; }
+
+.tabs-more{
+  margin-left: 8px;
+  width: 28px; height: 28px;
+  border: none; border-radius: 50%;
+  background: transparent;
+  position: relative;
+}
+
+.rec-widget{ 
+  display: none;
+ }
+
+.channel-video-container{ 
+  display: none;
+}
+.channel-video{ width: 100%; max-width: none; }
+.channel-video-info{
+  width: 100%;
+  margin: 10px 0 16px;
+}
+.channel-video-info h3{ font-size: 16px; width: 100%; }
+.channel-video-info span{ font-size: 14px; margin: 8px 0 8px; }
+.channel-video-info p{ font-size: 12px; }
 }
