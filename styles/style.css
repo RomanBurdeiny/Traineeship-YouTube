@@ -54,6 +54,9 @@
   width: 116px;
   height: 25px;
 }
+.logo-mobile{
+  display: none;
+}
 
 .logo img {
   height: 100%;
@@ -937,6 +940,7 @@ main {
     align-items: center;
     gap: 0 ;
   }
+  
  
        
   main {
